@@ -42,32 +42,34 @@ int main()
 
 		if(length > largest)
 		{
-			largest = length;			 
+			largest = length;
+			cout << "the largest so far\n";	 
 		}
 
 		if(length < smallest)
 		{
-			smallest = length;		
-		}
-
-		cout << "The largest value is: " << largest << "\n";
-		cout << "The smallest value is: " << smallest << "\n"; 
+			smallest = length;
+			cout << "the smallest so far\n";
+		} 
 
 		sum += length;
-		cout << "The sum of values: " << sum << "\n";
 
 		lengths.push_back(length);
-
-		cout << "The number of values: " << lengths.size() << "\n";
-
-		sort(lengths);
-
-		for (int i = 0; i < lengths.size(); ++i)
-		{
-			cout << i+1 << " " << lengths[i] << "\n";
-		}
-
 	}
+
+	cout << "The largest value is: " << largest << "\n";
+	cout << "The smallest value is: " << smallest << "\n"; 
+
+	cout << "The sum of values: " << sum << "\n";
+
+	cout << "The number of values: " << lengths.size() << "\n";
+
+	sort(lengths);
+
+	for (int i = 0; i < lengths.size(); ++i)
+		{
+			cout << i+1 << " - " << lengths[i] << "\n";
+		}
 
 	return 0;
 }
